@@ -1,0 +1,133 @@
+body{
+  font-family: 'Poppins', serif;
+    background-color: #f1f1f1;
+    background-image: url('../images/concrete_seamless.png');
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card > header:first-child{
+  background-color: #288088;
+  border: solid 2px #45ADAD;
+  padding: 20px 0px 20px;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.card{
+  border-radius: 50px 50px 0px 0px;
+  flex-basis: 450px;
+}
+
+.pricing{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery img{
+  border: solid 10px #50C7C7;
+  margin: 10px;
+  width: 300px;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#logo{
+  animation-name: mymove;
+  animation-duration: 5s;
+}
+
+@keyframes mymove {
+  0%   {opacity: 0; width: 25px;}
+  100% {opacity: 1; width: 475px;}
+}
+
+@media screen and (min-width: 900px){
+
+  header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .nav_links{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+
+  .card{
+      flex-basis: 250px;
+      align-items: baseline;
+  }
+
+  body > header{
+      width: 100%;
+      position: sticky;
+      top: 0;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  #logo {
+      animation-name: none;
+  }
+  }
+
+@media print {
+  body{
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f1f1f1;
+    }
+  
+  .nav_links{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+  }
+
+  .pricing{
+      flex-direction: row;
+      align-items: flex-end;
+  }
+
+  nav {
+      width: 816px;
+  }
+
+
+  .card{
+      flex-basis: 225px;
+      border: solid 2px #45ADDD;
+  }
+
+  .gallery{
+      display: none;
+  }
+
+  #gallery{
+      display: none;
+  }
+
+  ul:nth-child(2)>li:nth-child(2)::after {
+      content: "👍";
+    }
+}
